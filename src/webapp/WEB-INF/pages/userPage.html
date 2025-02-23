@@ -14,17 +14,17 @@
 <p th:text="${user.getNickname()}">value</p>
 <p th:text="${user.getEmail()}">value</p>
 
-<form th:method="GET" th:action="@{/{id}/edit(id=${user.getId()})}">
+<form th:method="GET" th:action="@{/users/{id}/edit(id=${user.getId()})}">
     <br>
     <input type="submit" value="Update user"/>
 </form>
 
-<form th:method="DELETE" th:action="@{/{id}(id=${user.getId()})}">
+<form th:method="DELETE" th:action="@{/users/{id}(id=${user.getId()})}">
     <br>
     <input type="submit" value="Delete user"/>
 </form>
 
-<form th:method="GET" th:action="@{/}">
+<form th:method="GET" th:action="@{/users}">
     <br>
     <input type="submit" value="Back to users"/>
 </form>
